@@ -1,0 +1,337 @@
+body {
+	margin:0px;
+	
+}
+
+DIV {
+	border:0px solid indigo;
+}
+
+#strona {
+	
+	width:100%;
+	height:100%;
+	min-height:700px;
+	background:#2f2327;
+	background-image: url('images/background.jpg');
+	background-size: 100%; 
+	background-repeat: no-repeat; 
+	background-attachment: fixed;
+	color: orange;
+}
+
+#naglowek {
+	
+	width:100%;
+	height:250px;
+	display:block;
+
+/*animacja nagłówka*/
+
+	-webkit-animation: cssAnimation 5s 20 ease-in-out;
+    -moz-animation: cssAnimation 5s 20 ease-in-out;
+     -o-animation: cssAnimation 5s 20 ease-in-out;
+}
+@-webkit-keyframes cssAnimation {
+from { -webkit-transform: rotate(0deg) scale(1) skew(1deg) translate(10px); }
+to { -webkit-transform: rotate(0deg) scale(1.5) skew(0deg) translate(0px); }
+}
+@-moz-keyframes cssAnimation {
+from { -moz-transform: rotate(0deg) scale(1) skew(1deg) translate(10px); }
+to { -moz-transform: rotate(0deg) scale(1.5) skew(0deg) translate(0px); }
+}
+@-o-keyframes cssAnimation {
+from { -o-transform: rotate(0deg) scale(1) skew(1deg) translate(10px); }
+to { -o-transform: rotate(0deg) scale(1.5) skew(0deg) translate(0px); }
+	
+}
+
+#menu {
+	
+	width:25%;
+	min-height:650px;
+	display:block;
+	float:left;
+	
+}
+
+#sekcja1 {
+	
+	width:50%;
+	min-height:650px;
+	display:block;
+	float:left;
+	
+}
+
+#sekcja2 {
+	
+	width:25%;
+	min-height:650px;
+	display:block;
+	float:left;
+	
+}
+
+
+#stopka {
+	
+	width:100%;
+	height:30px;
+	display:block;
+	clear:both;
+	text-align: right;
+	
+}
+
+ul, ul li {margin: 0; padding: 0;}
+
+#lista1 li {
+
+	list-style: none;
+	position: relative;
+}
+
+#lista1 ul {width: 200px; position: relative; z-index: 9;
+
+top: 0px; left: 163px; height: 50px; display:none; padding-left: 1px; border: 0px solid #aaaaaa; opacity: 0.9;
+
+}
+
+#lista1 li:hover ul {width: 160px; height: auto; display: inline-block;}
+
+#lista1 a, #lista1 li:hover li a 
+
+{
+
+	display: block; font: 12px/35px verdana, sans-serif; text-decoration: none; 
+	padding: 0 10px; width: 140px; color: orange; background: #2f2327 url('grafika/1m.jpg') repeat-x; opacity: 0.9;
+
+}
+
+#lista1 li:hover a, #lista1 li li:hover a {background: brown url('images/xxx.jpg') repeat-x; }
+
+.slajdy {
+
+	display:none;
+
+}
+
+/*menu silesian pionowe*/
+
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-y: hidden;
+    transition: 2s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 3px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: orange;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+/*menu silesian pozione*/
+
+.overlay1 {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 2s;
+}
+
+.overlay1-content {
+  position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay1 a {
+   padding: 3px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay1 a:hover, .overlay1 a:focus {
+    color: orange;
+}
+
+.overlay1 .closebtn {
+      position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay1 a {font-size: 20px}
+  .overlay1 .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+/*sklep*/
+
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #2f2327;
+    color: orange;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+/* Przyciski */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #2f2327;
+    margin: auto;
+    padding: 0;
+    border: 0px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #2f2327;
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #2f2327;
+    color: white;
+}
